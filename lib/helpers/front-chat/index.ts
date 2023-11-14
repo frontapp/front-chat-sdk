@@ -27,7 +27,7 @@ export async function boot(
   const loadScriptPromise = new Promise<FrontChat>((resolve) => {
     scriptTag.onload = () => {
       if (!window.FrontChat) {
-        throw new Error("[FrontChat] Could not set up window.FrontChat");
+        throw new Error("[front-chat-sdk] Could not set up window.FrontChat");
       }
 
       resolve(window.FrontChat);

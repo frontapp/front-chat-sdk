@@ -52,7 +52,7 @@ export function useFrontChat(
   const frontChat: FrontChat = (cmdType, params) => {
     if (!window.FrontChat) {
       console.error(
-        "[FrontChat] Have not finished setting up window.FrontChat"
+        "[front-chat-sdk] Have not finished setting up window.FrontChat"
       );
       return;
     }
