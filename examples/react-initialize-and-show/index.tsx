@@ -12,7 +12,6 @@ const chatId = '<CHAT_ID_REQUIRED>';
  * Component.
  */
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars, react-refresh/only-export-components
 function App() {
   const {frontChat, initialize, isInitialized} = useFrontChat(document.body);
 
