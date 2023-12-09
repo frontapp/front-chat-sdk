@@ -5,4 +5,4 @@ npm run sort-package-json:fix
 
 npm run lint
 
-npm run lint-staged
+npx lint-staged
