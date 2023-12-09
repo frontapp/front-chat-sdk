@@ -3,7 +3,6 @@ import {useEffect, useState} from 'react';
 import {useFrontChat} from '../lib/hooks/use-front-chat';
 import {appStyle, logoStyle, reactLogoStyle} from './app.css.ts';
 import reactLogo from './assets/react.svg';
-import './root.css';
 import frontChatLogo from '/chatWidget.svg';
 
 /*
