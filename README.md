@@ -96,7 +96,7 @@ After the last command, the example application can be accessed at http://localh
 
 There are two helpers provided in this repository, and each of them is used in the [examples](https://github.com/frontapp/front-chat-sdk/tree/main/examples) directory.
 
-- [`boot`](https://github.com/frontapp/front-chat-sdk/blob/main/lib/helpers/front-chat/index.ts)
+- [`boot`](https://github.com/frontapp/front-chat-sdk/blob/main/lib/helpers/boot/index.ts)
   - An async function that can be used to boot the Front Chat widget. The returned `Promise` is only resolved once the chat widget application is fully running inside its iframe.
 - [`useFrontChat`](https://github.com/frontapp/front-chat-sdk/blob/main/lib/hooks/use-front-chat/index.ts)
   - A React hook that provides helpers to initialize the Front Chat widget while adhering to the React component lifecycle.
