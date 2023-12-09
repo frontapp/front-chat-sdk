@@ -63,7 +63,7 @@
   </picture>
 </p>
 
-This repository contains examples to demonstrate how Front Chat can be launched on a variety of web pages. The core example demonstrates how the useFrontChat hook can be applied to quickly launch a chat widget in a React application, and there is also an example of using the generic boot function to launch Front Chat on any kind of web page.
+This repository contains examples to demonstrate how Front Chat can be launched on a variety of web pages. The core example demonstrates how the `useFrontChat` hook can be applied to quickly launch a chat widget in a React application, and there is also an example of using the generic `boot` function to launch Front Chat on any kind of web page.
 
 To learn more about Front Chat, check out [this article](https://help.front.com/en/articles/2062) from Front.
 
