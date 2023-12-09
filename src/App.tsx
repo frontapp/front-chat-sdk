@@ -1,46 +1,55 @@
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 
 import {useFrontChat} from '../lib/hooks/use-front-chat';
-import './App.css';
+import {appStyle, buttonStyle, formStyle, inputStyle, logoStyle, reactLogoStyle} from './app.css.ts';
 import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import frontChatLogo from '/chatWidget.svg';
 
-const testChatId = 'a267a8636f88301796acbea23eb2c84f';
+/*
+ * Component.
+ */
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [chatId, setChatId] = useState<string>('');
 
   const {initialize} = useFrontChat(document.body, {
-    nonce: '123'
+    // nonce: '123'
   });
 
-  useEffect(() => {
+  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
     if (!initialize) {
       return;
     }
 
-    initialize({chatId: testChatId});
-  }, [initialize]);
+    initialize({chatId});
+  };
 
   return (
-    <>
+    <div className={appStyle}>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+        <a href="https://help.front.com/en/articles/2062" target="_blank">
+          <img src={frontChatLogo} className={logoStyle} alt="Vite logo" />
         </a>
         <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+          <img src={reactLogo} className={reactLogoStyle} alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount(count => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-    </>
+      <h1>Front Chat + React</h1>
+      <form className={formStyle} onSubmit={onSubmit}>
+        <label htmlFor="chatId">chatId:</label>
+        <input
+          id="chatId"
+          className={inputStyle}
+          value={chatId}
+          onChange={event => setChatId(event.target.value)}
+        />
+        <button className={buttonStyle} type="submit">
+          Submit
+        </button>
+      </form>
+    </div>
   );
 }
 
