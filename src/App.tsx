@@ -1,16 +1,17 @@
-import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import { useFrontChat } from "../lib/hooks/use-front-chat";
+import {useEffect, useState} from 'react';
 
-const testChatId = "a267a8636f88301796acbea23eb2c84f";
+import {useFrontChat} from '../lib/hooks/use-front-chat';
+import './App.css';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+
+const testChatId = 'a267a8636f88301796acbea23eb2c84f';
 
 function App() {
   const [count, setCount] = useState(0);
 
-  const { initialize } = useFrontChat(document.body, {
-    nonce: "123",
+  const {initialize} = useFrontChat(document.body, {
+    nonce: '123'
   });
 
   useEffect(() => {
@@ -18,7 +19,7 @@ function App() {
       return;
     }
 
-    initialize({ chatId: testChatId });
+    initialize({chatId: testChatId});
   }, [initialize]);
 
   return (
@@ -33,16 +34,12 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <button onClick={() => setCount(count => count + 1)}>count is {count}</button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
     </>
   );
 }
