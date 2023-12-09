@@ -17,7 +17,7 @@ function App() {
 
   const [isWindowVisible, setIsWindowVisible] = useState(false);
 
-  // Example of using useFrontChat to initialize the chatWidget when a component mounts.
+  // Example of using useFrontChat to initialize the chat widget when a component mounts.
   useEffect(() => {
     if (!initialize || isInitialized) {
       return;
