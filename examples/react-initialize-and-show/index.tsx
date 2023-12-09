@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {useEffect, useState} from 'react';
 
 import {useFrontChat} from '../../lib/hooks/use-front-chat';
@@ -40,5 +41,3 @@ function App() {
 
   return <div>isInitialized: {isInitialized ? 'True' : 'False'}</div>;
 }
-
-export default App;
