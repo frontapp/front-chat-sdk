@@ -1,0 +1,42 @@
+name: Continuous Integration
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  package-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/cache-and-install-npm
+      - name: Package JSON
+        run: npm run sort-package-json:check
+
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/cache-and-install-npm
+      - name: Prettier
+        run: npm run prettier:check
+
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/cache-and-install-npm
+      - name: Lint
+        run: npm run lint
+
+  unused-exports:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/cache-and-install-npm
+      - name: Unused Exports
+        run: npm run unused-exports

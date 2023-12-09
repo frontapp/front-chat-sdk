@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from "react";
-import { boot } from "../../helpers/front-chat";
-import { FrontChat, FrontChatOptions, FrontChatParams } from "../../types";
+import {useEffect, useRef, useState} from 'react';
+
+import {boot} from '../../helpers/front-chat';
+import {type FrontChat, type FrontChatOptions, type FrontChatParams} from '../../types';
 
 /*
  * Types.
@@ -13,24 +14,19 @@ interface UseFrontChatReturn {
 }
 
 enum FrontChatStatusesEnum {
-  IDLE = "idle",
-  READY = "ready",
-  INITIALIZED = "initialized",
+  IDLE = 'idle',
+  READY = 'ready',
+  INITIALIZED = 'initialized'
 }
 
 /*
  * Hooks.
  */
 
-export function useFrontChat(
-  element?: HTMLElement,
-  options?: FrontChatOptions
-): UseFrontChatReturn {
+export function useFrontChat(element?: HTMLElement, options?: FrontChatOptions): UseFrontChatReturn {
   const scriptTagAppended = useRef(false);
 
-  const [status, setStatus] = useState<FrontChatStatusesEnum>(
-    FrontChatStatusesEnum.IDLE
-  );
+  const [status, setStatus] = useState<FrontChatStatusesEnum>(FrontChatStatusesEnum.IDLE);
 
   useEffect(() => {
     (async () => {
@@ -46,26 +42,24 @@ export function useFrontChat(
   }, [element, options]);
 
   if (status === FrontChatStatusesEnum.IDLE) {
-    return { frontChat: undefined, isInitialized: false };
+    return {frontChat: undefined, isInitialized: false};
   }
 
   const frontChat: FrontChat = (cmdType, params) => {
     if (!window.FrontChat) {
-      console.error(
-        "[front-chat-sdk] Have not finished setting up window.FrontChat"
-      );
+      console.error('[front-chat-sdk] Have not finished setting up window.FrontChat');
       return;
     }
 
-    if (cmdType === "init") {
+    if (cmdType === 'init') {
       const onInitCompleted = () => {
         setStatus(FrontChatStatusesEnum.INITIALIZED);
       };
 
-      return window.FrontChat(cmdType, { ...params, onInitCompleted });
+      return window.FrontChat(cmdType, {...params, onInitCompleted});
     }
 
-    if (cmdType === "shutdown") {
+    if (cmdType === 'shutdown') {
       setStatus(FrontChatStatusesEnum.READY);
     }
 
@@ -77,12 +71,12 @@ export function useFrontChat(
       return;
     }
 
-    frontChat("init", params);
+    frontChat('init', params);
   };
 
   return {
     frontChat,
     isInitialized: status === FrontChatStatusesEnum.INITIALIZED,
-    initialize,
+    initialize
   };
 }
