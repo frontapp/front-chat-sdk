@@ -58,8 +58,8 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/frontapp/front-chat-sdk/raw/main/images/screenshotDark.png">
-    <img src="https://github.com/frontapp/front-chat-sdk/raw/main/images/screenshot.png" alt="front-chat-sdk Screen Shot" height="480">
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/frontapp/front-chat-sdk/raw/main/public/screenshotDark.png">
+    <img src="https://github.com/frontapp/front-chat-sdk/raw/main/public/screenshot.png" alt="front-chat-sdk Screen Shot" height="480">
   </picture>
 </p>
 
