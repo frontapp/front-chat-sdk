@@ -37,3 +37,27 @@ export const reactLogoStyle = style({
 
   animation: `${reactLogoKeyframes} infinite 2s linear`
 });
+
+export const formStyle = style({
+  width: '100%',
+
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
+
+  gap: '8px'
+});
+
+export const inputStyle = style({
+  boxSizing: 'border-box',
+  height: '32px'
+});
+
+export const buttonStyle = style({
+  boxSizing: 'border-box',
+  height: '32px',
+
+  display: 'flex',
+  alignItems: 'center'
+});

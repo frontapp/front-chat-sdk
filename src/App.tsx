@@ -1,7 +1,7 @@
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 
 import {useFrontChat} from '../lib/hooks/use-front-chat';
-import {appStyle, logoStyle, reactLogoStyle} from './app.css.ts';
+import {appStyle, buttonStyle, formStyle, inputStyle, logoStyle, reactLogoStyle} from './app.css.ts';
 import reactLogo from './assets/react.svg';
 import frontChatLogo from '/chatWidget.svg';
 
@@ -16,13 +16,15 @@ function App() {
     // nonce: '123'
   });
 
-  useEffect(() => {
+  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
     if (!initialize) {
       return;
     }
 
     initialize({chatId});
-  }, [initialize]);
+  };
 
   return (
     <div className={appStyle}>
@@ -35,9 +37,17 @@ function App() {
         </a>
       </div>
       <h1>Front Chat + React</h1>
-      <form>
-        <input value={chatId} onChange={event => setChatId(event.target.value)} />
-        <button type="submit">Submit</button>
+      <form className={formStyle} onSubmit={onSubmit}>
+        <label htmlFor="chatId">chatId:</label>
+        <input
+          id="chatId"
+          className={inputStyle}
+          value={chatId}
+          onChange={event => setChatId(event.target.value)}
+        />
+        <button className={buttonStyle} type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );
