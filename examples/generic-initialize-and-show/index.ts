@@ -1,4 +1,4 @@
-import {boot} from '../../lib/helpers/front-chat';
+import {boot} from '../../lib/helpers/boot';
 
 /*
  * Constants.
