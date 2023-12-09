@@ -12,9 +12,7 @@ import frontChatLogo from '/chatWidget.svg';
 function App() {
   const [chatId, setChatId] = useState<string>('');
 
-  const {initialize} = useFrontChat(document.body, {
-    // nonce: '123'
-  });
+  const {initialize} = useFrontChat(document.body);
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
