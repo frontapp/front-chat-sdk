@@ -12,7 +12,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/frontapp/front-chat-sdk">
-   <img src="https://github.com/frontapp/front-chat-sdk/raw/main/public/chatWidget.svg" alt="Logo" height="100" />
+   <img src="https://github.com/frontapp/front-chat-sdk/raw/main/public/chatWidget.svg" alt="Logo" height="100">
   </a>
 </p>
 
@@ -59,7 +59,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/frontapp/front-chat-sdk/raw/main/public/screenshotDark.png">
-    <img src="https://github.com/frontapp/front-chat-sdk/raw/main/public/screenshot.png" alt="front-chat-sdk Screen Shot" height="480" />
+    <img src="https://github.com/frontapp/front-chat-sdk/raw/main/public/screenshot.png" alt="front-chat-sdk Screen Shot" height="480">
   </picture>
 </p>
 
@@ -94,12 +94,21 @@ After the last command, the example application can be accessed at http://localh
 
 ### Usage
 
-There are two helpers provided in this repository, and each of them is used in the [examples](https://github.com/frontapp/front-chat-sdk/tree/main/examples) directory.
+There are four helpers provided in this repository, and each of them is used in the [examples](https://github.com/frontapp/front-chat-sdk/tree/main/examples) directory.
+
+#### Quick-start Helpers
+
+- [`initialize`](https://github.com/frontapp/front-chat-sdk/blob/main/lib/helpers/initialize/index.ts)
+  - An async function that boots and initializes a Front Chat widget. The returned `Promise` is only resolved once the chat widget application is fully running and initialized inside its iframe.
+- [`useFrontChat`](https://github.com/frontapp/front-chat-sdk/blob/main/lib/hooks/use-front-chat/index.ts)
+  - A React hook that boots and initializes a Front Chat widget while adhering to the React component lifecycle.
+
+#### Advanced Helpers
 
 - [`boot`](https://github.com/frontapp/front-chat-sdk/blob/main/lib/helpers/boot/index.ts)
-  - An async function that can be used to boot the Front Chat widget. The returned `Promise` is only resolved once the chat widget application is fully running inside its iframe.
-- [`useFrontChat`](https://github.com/frontapp/front-chat-sdk/blob/main/lib/hooks/use-front-chat/index.ts)
-  - A React hook that provides helpers to initialize the Front Chat widget while adhering to the React component lifecycle.
+  - An async function that boots the Front Chat widget and returns helpers to interact with the Front Chat SDK. The returned `Promise` is only resolved once the chat widget application is fully running inside its iframe.
+- [`useFrontChatBoot`](https://github.com/frontapp/front-chat-sdk/blob/main/lib/hooks/use-front-chat-boot/index.ts)
+  - A React hook that boots the Front Chat widget and provides helpers to initialize the application while adhering to the React component lifecycle.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
