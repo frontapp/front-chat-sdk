@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 
-import {useFrontChat} from '../../lib/hooks/use-front-chat';
+import {useFrontChatBoot} from '../../lib/hooks/use-front-chat-boot';
 
 /*
  * Constants.
@@ -13,7 +13,7 @@ const chatId = '<CHAT_ID_REQUIRED>';
  */
 
 function App() {
-  const {frontChat, initialize, isInitialized} = useFrontChat(document.body);
+  const {frontChat, initialize, isInitialized} = useFrontChatBoot(document.body);
 
   const [isWindowVisible, setIsWindowVisible] = useState(false);
 

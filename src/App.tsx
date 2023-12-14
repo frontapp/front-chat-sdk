@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-import {useFrontChat} from '../lib/hooks/use-front-chat';
+import {useFrontChatBoot} from '../lib/hooks/use-front-chat-boot/index.ts';
 import {appStyle, buttonStyle, formStyle, inputStyle, logoStyle, reactLogoStyle} from './app.css.ts';
 import reactLogo from './assets/react.svg';
 import frontChatLogo from '/chatWidget.svg';
@@ -12,7 +12,7 @@ import frontChatLogo from '/chatWidget.svg';
 function App() {
   const [chatId, setChatId] = useState<string>('');
 
-  const {initialize} = useFrontChat(document.body);
+  const {initialize} = useFrontChatBoot(document.body);
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
