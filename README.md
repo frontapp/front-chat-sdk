@@ -115,7 +115,9 @@ Although this package is maintained by Front, feedback and contributions are **g
 
 ## Contact
 
-Gregory Linscheid - greg.linscheid@front.com
+Front Support - [https://help.front.com/en/contact-us](https://help.front.com/en/contact-us)
+
+Please mention that you are experiencing issues with Front Chat or `front-chat-sdk`, so that they can direct you to a member of the Live Chat team.
 
 Project Link: [https://github.com/frontapp/front-chat-sdk](https://github.com/frontapp/front-chat-sdk)
 
