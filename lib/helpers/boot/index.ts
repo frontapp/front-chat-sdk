@@ -7,7 +7,7 @@ import {type FrontChat, type FrontChatOptions} from '../../types';
 const scriptSrc = 'https://chat-assets.frontapp.com/v1/chat.bundle.js';
 
 /*
- * Helpers.
+ * Helper.
  */
 
 export async function boot(element?: HTMLElement, options?: FrontChatOptions): Promise<FrontChat> {
