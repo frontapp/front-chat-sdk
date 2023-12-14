@@ -7,10 +7,12 @@ import {type FrontChat, type FrontChatOptions, type FrontChatParams} from '../..
  * Types.
  */
 
-interface UseFrontChatReturn {
+type Initialize = (params?: FrontChatParams) => void;
+
+export interface UseFrontChatBootReturn {
   frontChat: FrontChat | undefined;
   isInitialized: boolean;
-  initialize?: (params?: FrontChatParams) => void;
+  initialize: Initialize | undefined;
 }
 
 enum FrontChatStatusesEnum {
@@ -23,7 +25,7 @@ enum FrontChatStatusesEnum {
  * Hook.
  */
 
-export function useFrontChatBoot(element?: HTMLElement, options?: FrontChatOptions): UseFrontChatReturn {
+export function useFrontChatBoot(element?: HTMLElement, options?: FrontChatOptions): UseFrontChatBootReturn {
   const scriptTagAppended = useRef(false);
 
   const [status, setStatus] = useState<FrontChatStatusesEnum>(FrontChatStatusesEnum.IDLE);
@@ -42,7 +44,7 @@ export function useFrontChatBoot(element?: HTMLElement, options?: FrontChatOptio
   }, [element, options]);
 
   if (status === FrontChatStatusesEnum.IDLE) {
-    return {frontChat: undefined, isInitialized: false};
+    return {frontChat: undefined, isInitialized: false, initialize: undefined};
   }
 
   const frontChat: FrontChat = (cmdType, params) => {

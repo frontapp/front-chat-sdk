@@ -1,13 +1,13 @@
 import {useEffect} from 'react';
 
-import {useFrontChatBoot} from '../use-front-chat-boot';
+import {type UseFrontChatBootReturn, useFrontChatBoot} from '../use-front-chat-boot';
 
 /*
  * Hook.
  */
 
-export function useFrontChat(chatId: string, element?: HTMLElement) {
-  const {isInitialized, initialize} = useFrontChatBoot(element);
+export function useFrontChat(chatId: string, element?: HTMLElement): UseFrontChatBootReturn {
+  const {frontChat, isInitialized, initialize} = useFrontChatBoot(element);
 
   useEffect(() => {
     if (isInitialized || !initialize || !chatId) {
@@ -16,4 +16,6 @@ export function useFrontChat(chatId: string, element?: HTMLElement) {
 
     initialize({chatId});
   }, [chatId, isInitialized, initialize]);
+
+  return {frontChat, isInitialized, initialize};
 }
