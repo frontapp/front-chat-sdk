@@ -12,7 +12,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/frontapp/front-chat-sdk">
-   <img src="https://github.com/frontapp/front-chat-sdk/raw/main/public/chatWidget.svg" alt="Logo" height="100">
+   <img src="https://github.com/frontapp/front-chat-sdk/raw/main/public/chatWidget.svg" alt="Logo" height="100" width="auto">
   </a>
 </p>
 
@@ -59,7 +59,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github.com/frontapp/front-chat-sdk/raw/main/public/screenshotDark.png">
-    <img src="https://github.com/frontapp/front-chat-sdk/raw/main/public/screenshot.png" alt="front-chat-sdk Screen Shot" height="480">
+    <img src="https://github.com/frontapp/front-chat-sdk/raw/main/public/screenshot.png" alt="front-chat-sdk Screen Shot" height="480" width="auto">
   </picture>
 </p>
 
