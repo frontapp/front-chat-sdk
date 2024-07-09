@@ -1,4 +1,4 @@
-import {SyntheticEvent} from 'react';
+import {type SyntheticEvent} from 'react';
 
 import {appStyle, logoStyle} from './app.css.ts';
 import {iframeStyle} from './embedded-app.css.ts';
