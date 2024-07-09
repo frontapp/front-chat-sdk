@@ -1,20 +1,25 @@
 import {type SyntheticEvent} from 'react';
 
-import {iframeStyle} from './embedded-app.css.ts';
-
 /*
  * Constants.
  */
 
 const scriptSrc = 'https://chat-assets.frontapp.com/v1/chat.bundle.js';
 
-const chatId = 'a661237b9f6511165e12488fc4c09b11';
+const chatId = '<CHAT_ID_REQUIRED>';
+
+const iframeStyle = {
+  width: '700px',
+  height: '755px',
+  border: 'none',
+  colorScheme: 'normal'
+};
 
 /*
  * Component.
  */
 
-function EmbeddedApp() {
+function App() {
   const onLoadIframe = async (event: SyntheticEvent<HTMLIFrameElement>) => {
     const iframe = event.target as HTMLIFrameElement;
 
@@ -39,7 +44,7 @@ function EmbeddedApp() {
     <div>
       <h1>Embedded Front Chat</h1>
 
-      <iframe className={iframeStyle} srcDoc="<main></main>" onLoad={onLoadIframe} />
+      <iframe style={iframeStyle} onLoad={onLoadIframe} />
 
       <h1>Below the Widget</h1>
       <p>You can have content above and below the embedded widget.</p>
@@ -47,4 +52,4 @@ function EmbeddedApp() {
   );
 }
 
-export default EmbeddedApp;
+export default App;
