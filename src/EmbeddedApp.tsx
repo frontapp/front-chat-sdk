@@ -1,7 +1,6 @@
 import {type SyntheticEvent} from 'react';
 
-import {appStyle, logoStyle} from './app.css.ts';
-import {iframeStyle} from './embedded-app.css.ts';
+import {appStyle, iframeStyle, logoStyle} from './embedded-app.css.ts';
 import frontChatLogo from '/chatWidget.svg';
 
 /*
