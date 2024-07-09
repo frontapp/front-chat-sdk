@@ -98,6 +98,8 @@ After the last command, the example application can be accessed at http://localh
 
 There are four helpers provided in this repository, and each of them is used in the [examples](https://github.com/frontapp/front-chat-sdk/tree/main/examples) directory.
 
+Additionally, there is an example of how to embed a Front Chat widget [directly in a page](https://github.com/frontapp/front-chat-sdk/tree/main/examples/react-embed-front-chat). This example uses React, but the general principle should work for any application.
+
 #### Quick-start Helpers
 
 - [`initialize`](https://github.com/frontapp/front-chat-sdk/blob/main/lib/helpers/initialize/index.ts)
