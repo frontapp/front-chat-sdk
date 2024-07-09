@@ -114,11 +114,11 @@ There are four helpers provided in this repository, and each of them is used in 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
+<!-- FEEDBACK -->
 
-## Contributing
+## Feedback
 
-Although this package is maintained by Front, feedback and contributions are **greatly appreciated**. Feel free to open an issue if you have any suggestions as to how this repository and its examples could be improved.
+Although this package is maintained by Front, feedback is **greatly appreciated**. Feel free to open an issue if you have any suggestions as to how this repository and its examples could be improved.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
