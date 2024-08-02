@@ -14,12 +14,18 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+    /* Interop */
+    "esModuleInterop": true,
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["vite.config.ts", "src", "lib", "examples"],
-  "references": [{"path": "./tsconfig.node.json"}]
+  "include": ["vite.config.ts", "src", "lib", "examples", "scripts"],
+  "references": [{"path": "./tsconfig.node.json"}],
+  "ts-node": {
+    "esm": true
+  }
 }
