@@ -16,6 +16,16 @@ const userId = '<USER_ID_REQUIRED>';
 const identitySecret = '<IDENTITY_SECRET_REQUIRED>';
 
 /*
+ * User Hash.
+ */
+
+// This is a hash generated from the userId using the identity secret.
+// Follow the instructions here to generate the user hash: https://dev.frontapp.com/docs/identify-users#computing-the-user-hash
+// NOTE: This should only ever be generated server-side, and this is just an example. Do not generate this value client-side in your application.
+const hmac = createHmac('sha256', identitySecret);
+const userHash = hmac.update(userId).digest('hex');
+
+/*
  * Component.
  */
 
@@ -23,12 +33,6 @@ function App() {
   const {frontChat, initialize, isInitialized} = useFrontChatBoot(document.body);
 
   const [isWindowVisible, setIsWindowVisible] = useState(false);
-
-  // This is a hash generated from the userId using the identity secret.
-  // Follow the instructions here to generate the user hash: https://dev.frontapp.com/docs/identify-users#computing-the-user-hash
-  // NOTE: This should only ever be generated server-side, and this is just an example. Do not generate this value client-side in your application.
-  const hmac = createHmac('sha256', identitySecret);
-  const userHash = hmac.update(userId).digest('hex');
 
   // Example of using useFrontChat to initialize the chat widget when a component mounts.
   useEffect(() => {
