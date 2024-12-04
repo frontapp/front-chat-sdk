@@ -1,4 +1,4 @@
-import {type SyntheticEvent} from 'react';
+import {useEffect, useRef} from 'react';
 
 /*
  * Constants.
@@ -20,9 +20,14 @@ const iframeStyle = {
  */
 
 function App() {
-  const onLoadIframe = async (event: SyntheticEvent<HTMLIFrameElement>) => {
-    const iframe = event.target as HTMLIFrameElement;
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
+  const onLoadIframe = () => {
+    if (!iframeRef.current) {
+      return;
+    }
+
+    const iframe = iframeRef.current;
     const scriptTag = document.createElement('script');
     scriptTag.setAttribute('type', 'text/javascript');
     scriptTag.setAttribute('src', scriptSrc);
@@ -40,11 +45,17 @@ function App() {
     iframe.contentDocument?.body.appendChild(scriptTag);
   };
 
+  useEffect(() => {
+    if (iframeRef.current) {
+      onLoadIframe();
+    }
+  }, []);
+
   return (
     <div>
       <h1>Embedded Front Chat</h1>
 
-      <iframe style={iframeStyle} onLoad={onLoadIframe} />
+      <iframe style={iframeStyle} ref={iframeRef} onLoad={onLoadIframe} />
 
       <h1>Below the Widget</h1>
       <p>You can have content above and below the embedded widget.</p>
