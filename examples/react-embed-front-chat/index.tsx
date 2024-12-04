@@ -28,6 +28,7 @@ function App() {
     }
 
     const iframe = iframeRef.current;
+
     const scriptTag = document.createElement('script');
     scriptTag.setAttribute('type', 'text/javascript');
     scriptTag.setAttribute('src', scriptSrc);
