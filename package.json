@@ -1,10 +1,57 @@
 {
   "name": "front-chat-sdk",
-  "version": "0.0.0",
+  "version": "0.0.1-beta",
+  "description": "Front Chat SDK",
   "type": "module",
+  "keywords": [
+    "frontapp",
+    "front",
+    "chat",
+    "sdk"
+  ],
+  "homepage": "https://github.com/frontapp/front-chat-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/frontapp/front-chat-sdk/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontapp/front-chat-sdk.git"
+  },
+  "author": "Frontapp",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./helpers": {
+      "types": "./dist/helpers/index.ts",
+      "import": "./dist/helpers/index.mjs",
+      "require": "./dist/helpers/index.cjs"
+    },
+    "./hooks": {
+      "types": "./dist/hooks/index.ts",
+      "import": "./dist/hooks/index.mjs",
+      "require": "./dist/hooks/index.cjs"
+    },
+    "./types": {
+      "types": "./dist/types/index.ts",
+      "import": "./dist/types/index.mjs",
+      "require": "./dist/types/index.cjs"
+    }
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc && vite build",
+    "build:packages": "tsc && tsup",
     "dev": "vite",
+    "dev:tsup": "tsup --watch",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
     "prepare": "husky install",
@@ -41,6 +88,7 @@
     "prettier": "3.1.0",
     "sort-package-json": "^2.6.0",
     "ts-unused-exports": "^10.0.1",
+    "tsup": "^8.3.5",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
     "vite-plugin-node-polyfills": "^0.22.0"
