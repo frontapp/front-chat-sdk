@@ -19,7 +19,7 @@
 <h3 align="center">front-chat-sdk</h3>
 
 <p align="center">
-  A Typescript notebook for developing, prototyping, and sharing software.
+  Utilities and examples for launching Front Chat.
   <br />
   <a href="https://dev.frontapp.com/docs/chat-sdk-reference"><strong>Explore the docs »</strong></a>
   <br />
