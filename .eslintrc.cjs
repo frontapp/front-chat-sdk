@@ -4,7 +4,7 @@ module.exports = {
   root: true,
   env: {browser: true, es2020: true},
   extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react-hooks/recommended'],
-  ignorePatterns: ['.eslintrc.cjs', 'examples', 'dist', 'node_modules'],
+  ignorePatterns: ['.eslintrc.cjs', 'examples', 'dist'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: path.join(__dirname, 'tsconfig.json')
