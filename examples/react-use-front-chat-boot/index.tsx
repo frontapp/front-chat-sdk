@@ -12,7 +12,7 @@ const chatId = '<CHAT_ID_REQUIRED>';
  * Component.
  */
 
-function App() {
+export function App() {
   const {frontChat, initialize, isInitialized} = useFrontChatBoot(document.body);
 
   const [isWindowVisible, setIsWindowVisible] = useState(false);
