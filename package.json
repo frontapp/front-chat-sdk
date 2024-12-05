@@ -81,7 +81,7 @@
     "preview": "vite preview",
     "sort-package-json:check": "sort-package-json --check",
     "sort-package-json:fix": "sort-package-json",
-    "unused-exports": "ts-unused-exports ./tsconfig.json --excludePathsFromReport='vite.config.ts;'"
+    "unused-exports": "ts-unused-exports ./tsconfig.json --excludePathsFromReport='vite.config.ts;lib/index.ts;tsup.config.ts'"
   },
   "lint-staged": {
     "**/*": "npm run prettier:fix --"
@@ -99,6 +99,7 @@
     "@typescript-eslint/parser": "^6.0.0",
     "@vanilla-extract/vite-plugin": "^3.9.2",
     "@vitejs/plugin-react-swc": "^3.3.2",
+    "esbuild": "^0.24.0",
     "eslint": "^8.55.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.0.1",

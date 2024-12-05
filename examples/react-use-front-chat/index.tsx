@@ -10,7 +10,7 @@ const chatId = '<CHAT_ID_REQUIRED>';
  * Component.
  */
 
-export function App() {
+function App() {
   const {isInitialized} = useFrontChat(chatId);
 
   return <div>isInitialized: {isInitialized ? 'True' : 'False'}</div>;

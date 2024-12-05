@@ -19,7 +19,7 @@ const iframeStyle = {
  * Component.
  */
 
-export function App() {
+function App() {
   const onLoadIframe = async (event: SyntheticEvent<HTMLIFrameElement>) => {
     const iframe = event.target as HTMLIFrameElement;
 

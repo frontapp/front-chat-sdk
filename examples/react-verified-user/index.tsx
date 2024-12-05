@@ -29,7 +29,7 @@ const userHash = hmac.update(userId).digest('hex');
  * Component.
  */
 
-export function App() {
+function App() {
   const {frontChat, initialize, isInitialized} = useFrontChatBoot(document.body);
 
   const [isWindowVisible, setIsWindowVisible] = useState(false);
