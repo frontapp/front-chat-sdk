@@ -2,7 +2,6 @@
   "name": "front-chat-sdk",
   "version": "0.0.1-beta",
   "description": "Front Chat SDK",
-  "type": "module",
   "keywords": [
     "frontapp",
     "front",
@@ -17,8 +16,10 @@
     "type": "git",
     "url": "git+https://github.com/frontapp/front-chat-sdk.git"
   },
+  "license": "Apache-2.0",
   "author": "Frontapp",
   "sideEffects": false,
+  "type": "module",
   "exports": {
     ".": {
       "import": {
@@ -116,6 +117,5 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  },
-  "license": "Apache-2.0"
+  }
 }
