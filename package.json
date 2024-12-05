@@ -81,7 +81,7 @@
     "preview": "vite preview",
     "sort-package-json:check": "sort-package-json --check",
     "sort-package-json:fix": "sort-package-json",
-    "unused-exports": "ts-unused-exports ./tsconfig.json --excludePathsFromReport='vite.config.ts;lib/index.ts;tsup.config.ts'"
+    "unused-exports": "ts-unused-exports ./tsconfig.json --excludePathsFromReport='vite.config.ts;lib/index.ts;tsup.config.ts;examples;'"
   },
   "lint-staged": {
     "**/*": "npm run prettier:fix --"
