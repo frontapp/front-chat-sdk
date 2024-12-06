@@ -1,0 +1,13 @@
+name: Build Package and Publish to NPM
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/cache-and-install-npm
+      - name: Build and Publish
+        uses: ./.github/actions/build-and-publish-package
