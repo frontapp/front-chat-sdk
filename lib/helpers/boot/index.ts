@@ -1,4 +1,4 @@
-import {type FrontChat, type FrontChatOptions} from '../../types';
+import {type FrontChat, type FrontChatOptions} from '../../types/front-chat-types';
 
 /*
  * Constants.

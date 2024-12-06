@@ -1,10 +1,78 @@
 {
   "name": "front-chat-sdk",
-  "version": "0.0.0",
+  "version": "0.0.1-beta",
+  "description": "Front Chat SDK",
+  "keywords": [
+    "frontapp",
+    "front",
+    "chat",
+    "sdk"
+  ],
+  "homepage": "https://github.com/frontapp/front-chat-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/frontapp/front-chat-sdk/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontapp/front-chat-sdk.git"
+  },
+  "license": "Apache-2.0",
+  "author": "Frontapp",
+  "sideEffects": false,
   "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./helpers": {
+      "import": {
+        "types": "./dist/helpers/index.d.ts",
+        "default": "./dist/helpers/index.js"
+      },
+      "require": {
+        "types": "./dist/helpers/index.d.cts",
+        "default": "./dist/helpers/index.cjs"
+      }
+    },
+    "./hooks": {
+      "require": {
+        "types": "./dist/hooks/index.d.cts",
+        "default": "./dist/hooks/index.cjs"
+      },
+      "import": {
+        "types": "./dist/hooks/index.d.ts",
+        "default": "./dist/hooks/index.js"
+      }
+    },
+    "./types": {
+      "require": {
+        "types": "./dist/types/index.d.cts",
+        "default": "./dist/types/index.cjs"
+      },
+      "import": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/types/index.js"
+      }
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc && vite build",
+    "build:packages": "tsc && tsup",
     "dev": "vite",
+    "dev:tsup": "tsup --watch",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
     "prepare": "husky install",
@@ -13,7 +81,7 @@
     "preview": "vite preview",
     "sort-package-json:check": "sort-package-json --check",
     "sort-package-json:fix": "sort-package-json",
-    "unused-exports": "ts-unused-exports ./tsconfig.json --excludePathsFromReport='vite.config.ts;'"
+    "unused-exports": "ts-unused-exports ./tsconfig.json --excludePathsFromReport='vite.config.ts;lib/index.ts;tsup.config.ts;examples;'"
   },
   "lint-staged": {
     "**/*": "npm run prettier:fix --"
@@ -31,6 +99,7 @@
     "@typescript-eslint/parser": "^6.0.0",
     "@vanilla-extract/vite-plugin": "^3.9.2",
     "@vitejs/plugin-react-swc": "^3.3.2",
+    "esbuild": "^0.24.0",
     "eslint": "^8.55.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.0.1",
@@ -41,6 +110,7 @@
     "prettier": "3.1.0",
     "sort-package-json": "^2.6.0",
     "ts-unused-exports": "^10.0.1",
+    "tsup": "^8.3.5",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
     "vite-plugin-node-polyfills": "^0.22.0"

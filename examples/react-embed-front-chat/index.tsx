@@ -19,7 +19,7 @@ const iframeStyle = {
  * Component.
  */
 
-function App() {
+export function App() {
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
   const onLoadIframe = () => {
