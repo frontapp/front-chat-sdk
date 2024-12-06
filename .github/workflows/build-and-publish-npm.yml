@@ -1,0 +1,18 @@
+name: Build Package and Publish to NPM
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Cache and Install npm
+        uses: ./.github/actions/cache-and-install-npm
+      - name: Build Package
+        run: npm run build:packages
+      - name: Publish Package
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
