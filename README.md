@@ -8,6 +8,12 @@
 [![Issues][issues-shield]][issues-url]
 [![Apache 2.0 License][license-shield]][license-url]
 
+<!-- NPM PACKAGE LOGO -->
+
+`front-chat-sdk`
+
+<a href="https://badge.fury.io/js/front-chat-sdk"><img src="https://badge.fury.io/js/front-chat-sdk.svg" alt="npm version" height="18" />
+
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -74,6 +80,22 @@ To learn more about Front Chat, check out [this article](https://help.front.com/
 <!-- GETTING STARTED -->
 
 ## Getting Started
+
+We now have an <a href="https://www.npmjs.com/package/front-chat-sdk">npm package</a> available!
+
+```sh
+npm i front-chat-sdk
+```
+
+```ts
+import {initialize} from 'front-chat-sdk/helpers';
+import {useFrontChat} from 'front-chat-sdk/hooks';
+import type {FrontChat} from 'front-chat-sdk/types';
+```
+
+See [examples](https://github.com/frontapp/front-chat-sdk/tree/main/examples) for more on how to use front-chat-sdk.
+
+## Running front-chat-sdk locally
 
 ### Install and Run
 
