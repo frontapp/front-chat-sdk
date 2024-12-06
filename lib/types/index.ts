@@ -1,3 +1,3 @@
-import * as types from './front-chat-types';
+import {type FrontChat, type FrontChatOptions, type FrontChatParams} from './front-chat-types';
 
-export {types};
+export type {FrontChat, FrontChatOptions, FrontChatParams};
