@@ -179,4 +179,4 @@ Distributed under the Apache 2.0 License. See [`LICENSE`][license-url] for more 
 [issues-shield]: https://img.shields.io/github/issues/frontapp/front-chat-sdk.svg?style=for-the-badge
 [issues-url]: https://github.com/frontapp/front-chat-sdk/issues
 [license-shield]: https://img.shields.io/github/license/frontapp/front-chat-sdk.svg?style=for-the-badge
-[license-url]: https://github.com/frontapp/front-chat-sdk/blob/master/LICENSE
+[license-url]: https://github.com/frontapp/front-chat-sdk/blob/master/LICENSE.txt
