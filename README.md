@@ -10,8 +10,6 @@
 
 <!-- NPM PACKAGE LOGO -->
 
-`front-chat-sdk`
-
 <a href="https://badge.fury.io/js/front-chat-sdk"><img src="https://badge.fury.io/js/front-chat-sdk.svg" alt="npm version" height="18" />
 
 <!-- PROJECT LOGO -->
