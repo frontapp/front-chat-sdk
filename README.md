@@ -42,15 +42,15 @@
     <li>
       <a href="#about-the-project">About The Project</a>
     </li>
+    <li><a href="#getting-started">Getting Started</a></li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#running-front-chat-sdk-locally">Running front-chat-sdk locally</a>
       <ul>
-        <li><a href="#pre-requisites">Pre-requisites</a></li>
-        <li><a href="#install-and-run">Install and Run</a></li>
+        <li><a href="#install-and-run">Install and run</a></li>
+        <li><a href="#usage">Usage</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#feedback">Feedback</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#license">License</a></li>
   </ol>
