@@ -1,7 +1,12 @@
 import {useEffect, useRef, useState} from 'react';
 
 import {boot} from '../../helpers/boot';
-import {FrontChatCmdType, type FrontChat, type FrontChatOptions, type FrontChatParams} from '../../types/front-chat-types';
+import {
+  type FrontChat,
+  FrontChatCmdType,
+  type FrontChatOptions,
+  type FrontChatParams
+} from '../../types/front-chat-types';
 
 /*
  * Types.
