@@ -30,6 +30,8 @@ export type FrontChatParams = {
   isMobileWebview?: boolean;
   useDefaultLauncher?: boolean;
   onInitCompleted?: () => void;
+  // Allow any other key with a value of string, boolean, object, or undefined
+  [key: string]: string | boolean | object | undefined;
 };
 
 export interface FrontChatOptions {

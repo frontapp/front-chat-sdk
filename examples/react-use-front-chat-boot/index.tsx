@@ -39,5 +39,5 @@ export function App() {
     setIsWindowVisible;
   }, [frontChat, isInitialized, isWindowVisible]);
 
-  return <div>isInitialized: {isInitialized}</div>;
+  return <div>isInitialized: {isInitialized ? 'True' : 'False'}</div>;
 }
