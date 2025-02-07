@@ -1,5 +1,7 @@
 import {useEffect, useRef} from 'react';
 
+import {FrontChatCmdType} from '../../lib/types/front-chat-types';
+
 /*
  * Constants.
  */
@@ -33,7 +35,7 @@ export function App() {
     scriptTag.setAttribute('type', 'text/javascript');
     scriptTag.setAttribute('src', scriptSrc);
     scriptTag.onload = () => {
-      iframe.contentWindow?.FrontChat?.('init', {
+      iframe.contentWindow?.FrontChat?.(FrontChatCmdType.Init, {
         chatId,
         useDefaultLauncher: false,
         shouldShowWindowOnLaunch: true,

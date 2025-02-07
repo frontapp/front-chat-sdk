@@ -13,21 +13,24 @@ declare global {
  */
 
 export enum FrontChatCmdType {
-  Init = "init",
-  Shutdown = "shutdown",
+  Init = 'init',
+  Show = 'show',
+  Shutdown = 'shutdown'
 }
 
 export type FrontChatParams = {
+  chatId?: string;
+  userId?: string;
+  userHash?: string;
   shouldShowWindowOnLaunch?: boolean;
   shouldExpandOnShowWindow?: boolean;
   shouldHideCloseButton?: boolean;
-  ShouldHideExpandButton?: boolean;
-  welcomeMessageAppearance?: "hidden" | "always";
+  shouldHideExpandButton?: boolean;
+  welcomeMessageAppearance?: 'hidden' | 'always';
   isMobileWebview?: boolean;
   useDefaultLauncher?: boolean;
   onInitCompleted?: () => void;
-}
-
+};
 
 export interface FrontChatOptions {
   nonce?: string;

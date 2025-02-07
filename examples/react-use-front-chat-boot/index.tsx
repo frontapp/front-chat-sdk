@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 
 import {useFrontChatBoot} from '../../lib/hooks/use-front-chat-boot';
+import {FrontChatCmdType} from '../../lib/types/front-chat-types';
 
 /*
  * Constants.
@@ -34,9 +35,9 @@ export function App() {
       return;
     }
 
-    frontChat('show');
+    frontChat(FrontChatCmdType.Show);
     setIsWindowVisible;
   }, [frontChat, isInitialized, isWindowVisible]);
 
-  return <div>isInitialized: {isInitialized ? 'True' : 'False'}</div>;
+  return <div>isInitialized: {isInitialized}</div>;
 }
