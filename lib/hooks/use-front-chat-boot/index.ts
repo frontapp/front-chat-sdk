@@ -1,7 +1,7 @@
 import {useEffect, useRef, useState} from 'react';
 
 import {boot} from '../../helpers/boot';
-import {type FrontChat, type FrontChatOptions, type FrontChatParams} from '../../types/front-chat-types';
+import {FrontChatCmdType, type FrontChat, type FrontChatOptions, type FrontChatParams} from '../../types/front-chat-types';
 
 /*
  * Types.
@@ -53,7 +53,7 @@ export function useFrontChatBoot(element?: HTMLElement, options?: FrontChatOptio
       return;
     }
 
-    if (cmdType === 'init') {
+    if (cmdType === FrontChatCmdType.Init) {
       const onInitCompleted = () => {
         setStatus(FrontChatStatusesEnum.INITIALIZED);
       };
@@ -61,7 +61,7 @@ export function useFrontChatBoot(element?: HTMLElement, options?: FrontChatOptio
       return window.FrontChat(cmdType, {...params, onInitCompleted});
     }
 
-    if (cmdType === 'shutdown') {
+    if (cmdType === FrontChatCmdType.Shutdown) {
       setStatus(FrontChatStatusesEnum.READY);
     }
 
@@ -73,7 +73,7 @@ export function useFrontChatBoot(element?: HTMLElement, options?: FrontChatOptio
       return;
     }
 
-    frontChat('init', params);
+    frontChat(FrontChatCmdType.Init, params);
   };
 
   return {

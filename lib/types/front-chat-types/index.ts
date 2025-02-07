@@ -12,11 +12,27 @@ declare global {
  * Types.
  */
 
+export enum FrontChatCmdType {
+  Init = "init",
+  Shutdown = "shutdown",
+}
+
+export type FrontChatParams = {
+  shouldShowWindowOnLaunch?: boolean;
+  shouldExpandOnShowWindow?: boolean;
+  shouldHideCloseButton?: boolean;
+  ShouldHideExpandButton?: boolean;
+  welcomeMessageAppearance?: "hidden" | "always";
+  isMobileWebview?: boolean;
+  useDefaultLauncher?: boolean;
+  onInitCompleted?: () => void;
+}
+
+
 export interface FrontChatOptions {
   nonce?: string;
 }
 
 type UnbindHandler = () => void;
 
-export type FrontChatParams = Record<string, string | boolean | object>;
-export type FrontChat = (cmdType: string, params?: FrontChatParams) => UnbindHandler | undefined;
+export type FrontChat = (cmdType: FrontChatCmdType, params?: FrontChatParams) => UnbindHandler | undefined;
