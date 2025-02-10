@@ -12,9 +12,10 @@ declare global {
  * Types.
  */
 
-export enum FrontChatCmdType {
+export enum FrontChatCommand {
   Init = 'init',
   Show = 'show',
+  Hide = 'hide',
   Shutdown = 'shutdown'
 }
 
