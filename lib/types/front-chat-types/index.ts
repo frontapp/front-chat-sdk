@@ -18,5 +18,5 @@ export interface FrontChatOptions {
 
 type UnbindHandler = () => void;
 
-export type FrontChatParams = Record<string, string | boolean | object>;
+export type FrontChatParams = Record<string, string | boolean | object> | ((handler: any) => void);
 export type FrontChat = (cmdType: string, params?: FrontChatParams) => UnbindHandler | undefined;
