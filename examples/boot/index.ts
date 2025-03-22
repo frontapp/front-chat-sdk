@@ -1,4 +1,5 @@
 import {boot} from '../../lib/helpers/boot';
+import {FrontChatCommandsEnum} from '../../lib/types/front-chat-types';
 
 /*
  * Constants.
@@ -17,9 +18,9 @@ boot(document.body)
     // option to the 'init' command. The below callback is just an example of waiting for the chat widget to
     // be initialized, before performing another action.
     const onInitCompleted = () => {
-      frontChat('show');
+      frontChat(FrontChatCommandsEnum.SHOW);
     };
 
-    frontChat('init', {chatId, onInitCompleted});
+    frontChat(FrontChatCommandsEnum.INIT, {chatId, onInitCompleted});
   })
   .catch(console.error);
