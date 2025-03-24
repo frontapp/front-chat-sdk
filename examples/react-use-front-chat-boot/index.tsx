@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 
 import {useFrontChatBoot} from '../../lib/hooks/use-front-chat-boot';
+import {FrontChatCommandsEnum} from '../../lib/types/front-chat-types';
 
 /*
  * Constants.
@@ -34,7 +35,7 @@ export function App() {
       return;
     }
 
-    frontChat('show');
+    frontChat(FrontChatCommandsEnum.SHOW);
     setIsWindowVisible;
   }, [frontChat, isInitialized, isWindowVisible]);
 

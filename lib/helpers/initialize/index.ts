@@ -1,3 +1,4 @@
+import {FrontChatCommandsEnum} from '../../types/front-chat-types';
 import {boot} from '../boot';
 
 /*
@@ -7,5 +8,5 @@ import {boot} from '../boot';
 export async function initialize(chatId: string, element?: HTMLElement) {
   const frontChat = await boot(element);
 
-  frontChat('init', {chatId});
+  frontChat(FrontChatCommandsEnum.INIT, {chatId});
 }

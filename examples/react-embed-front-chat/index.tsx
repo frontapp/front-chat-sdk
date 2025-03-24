@@ -1,5 +1,7 @@
 import {useEffect, useRef} from 'react';
 
+import {FrontChatCommandsEnum} from '../../lib/types/front-chat-types';
+
 /*
  * Constants.
  */
@@ -33,7 +35,7 @@ export function App() {
     scriptTag.setAttribute('type', 'text/javascript');
     scriptTag.setAttribute('src', scriptSrc);
     scriptTag.onload = () => {
-      iframe.contentWindow?.FrontChat?.('init', {
+      iframe.contentWindow?.FrontChat?.(FrontChatCommandsEnum.INIT, {
         chatId,
         useDefaultLauncher: false,
         shouldShowWindowOnLaunch: true,
