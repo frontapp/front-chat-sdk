@@ -59,9 +59,11 @@ export function useFrontChatBoot(element?: HTMLElement, options?: FrontChatOptio
     }
 
     if (cmdType === FrontChatCommandsEnum.INIT) {
-      const onInitCompleted = () => {
-        setStatus(FrontChatStatusesEnum.INITIALIZED);
-      };
+      const onInitCompleted =
+        params?.onInitCompleted ??
+        (() => {
+          setStatus(FrontChatStatusesEnum.INITIALIZED);
+        });
 
       return window.FrontChat(cmdType, {...params, onInitCompleted});
     }
